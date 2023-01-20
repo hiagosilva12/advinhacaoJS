@@ -2,7 +2,12 @@ const msgNumeroMenor = "Você errou! O numero é menor que o numero secreto!";
 const msgNumeroMaior = "Você errou! O numero é maior que o numero secreto!";
 const tentativas = 3;
 let rodada = 1;
-const numeroSecreto = 10;
+
+function numeroAleatorio(min, max) {
+  return Math.random() * (max - min) + min;
+}
+
+const numeroSecreto = Math.floor(numeroAleatorio(0, 15));
 
 alert("Bem vindo ao jogo de Advinhação!");
 
